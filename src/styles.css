@@ -5,9 +5,10 @@
 }
 nav {
 	display: flex;
-	justify-content: space-around;
-	padding: 30px 0px 30px;
-	border: 3px solid blue;
+	justify-content: space-between;
+	margin: 4px;
+	padding: 30px 30px 30px;
+	border: 3px solid #002e63;
 }
 
 html, body {

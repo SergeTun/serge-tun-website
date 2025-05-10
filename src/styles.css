@@ -47,6 +47,7 @@ a.nav-element {
 #quote {
 	/* center quote */
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;

@@ -5,29 +5,40 @@
 		<link rel="stylesheet" href="styles.css">
 	</head>
 	<body>
-		<!-- Bro, try to visualize the boxes when you make ur html, you have 2 main boxes, the navigation box and the page box, hence two block type elements one after the other :)-->
+		<!-- Sticky nav element makes it move with it -->
 		<nav>
 			<div class="nav-element" id="logo"></div>
 			<a class="nav-element" href="/work">Work</a>
 			<a class="nav-element" href="/photos">Photos</a>
-			<a class="nav-element" href="/about">About</a>
+			<a class="nav-element" href="#about">About</a>
 		</nav>
-		<div id="quote">
-			"Be like Water" <br>Bruce Lee
+
+		<div class="fit-whole-screen">
+			<div class="fill-screen-leftover" id="quote">
+				"Be like Water" <br>Bruce Lee
+			</div>
 		</div>
-		<div id="about">
-			About 
+
+		<div class="fit-whole-screen">
+			<h1 id="about" class="heading">
+				About 
+			</h1>
+			<div class="fill-screen-leftover page">
+				<p>I'm a 20 year old aspiring designer focusing on front-end development, graphic design, video editing and photography.</p>
+				<p>I love playing the guitar, judo and travelling.</p>
+				<p>I'm from Montréal, but I completed my secondary education in Washington DC, and am currently pursuing my tertiary education in Belgium at KU Leuven.</p>
+			</div>
 		</div>
-		<div id="about-page">
-			<div id="about-element">
-			<p>I’m a 20 year old aspiring designer focusing on front-end</p>
-			<p>development, graphic design, video editing and photography.</p>
-			<p>I love playing the guitar, judo and travelling.</p>
-			<p>I’m from Montréal, but I completed my secondary education</p>
-			<p>in Washington DC, and am currently pursuing</p>
-			<p>my tertiary education in Belgium at KU Leuven.</p>
+		<div class="fit-whole-screen">
+			<h1 id="rbout" class="heading">
+				About 
+			</h1>
+			<div class="fill-screen-leftover page">
+				<p>I'm a 20 year old aspiring designer focusing on front-end development, graphic design, video editing and photography.</p>
+				<p>I love playing the guitar, judo and travelling.</p>
+				<p>I'm from Montréal, but I completed my secondary education in Washington DC, and am currently pursuing my tertiary education in Belgium at KU Leuven.</p>
+			</div>
 		</div>
-		</div>
-		
+
 	</body>
 </html>

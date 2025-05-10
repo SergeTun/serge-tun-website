@@ -8,11 +8,32 @@ nav {
 	justify-content: space-between;
 	margin: 4px;
 	padding: 30px 30px 30px;
-	border: 3px solid #002e63;
+	border: 3px solid rgba(0, 119, 255, 0.35);
+	position: sticky;
+	top: 0;
+	background: black;
+}
+
+html {
+	/* smooth scrolling when clicking an anchor tag */
+	scroll-behavior: smooth;
 }
 
 html, body {
-	height: 100%;
+	/* Cool snap effect, remove if you don't like */
+	scroll-snap-type: both mandatory;
+}
+/* Bro these two class' are gonna mess you up in the future if you don't understand them, i swear. Ask me if you can't get it*/
+.fit-whole-screen {
+	display: flex;
+	flex-direction: column;
+	/* height should be the screen size - nav bar height */
+	height: calc(100dvh - 110px);
+}
+
+/* fit rest of screen */
+.fill-screen-leftover {
+	flex-grow: 1;
 }
 
 
@@ -22,17 +43,24 @@ a.nav-element {
 	font-size: 32px;
 	font-family: "GFS Didot";
 }
+
 #quote {
+	/* center quote */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+
+	/* Cool snap effect, remove if you don't like */
+	scroll-snap-align: start;
+  scroll-margin-top: 110px;
+
+	/* font config */
 	font-size: 48px;
 	font-family: "GFS Didot";
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal; 
-	display: flex;
-	height: 100%;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
 }
 
 #logo {
@@ -40,38 +68,40 @@ a.nav-element {
 	padding: 20px;
 }
 
-#about {
+h1.heading {
 	border: 3px solid rgba(0, 119, 255, 0.35);
 	margin: 4px;
 	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+	/* Cool snap effect, remove if you don't like */
+	scroll-snap-align: start;
+  scroll-margin-top: 110px;
+
+	/* font config */
 	font-family: "GFS Didot";
 	font-size: 64px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: normal;
 	letter-spacing: 5px;
+
+	/* center element */
 	display: flex;
-	height: 175px;
 	justify-content: center;
 	align-items: center;
 }
 
-#about-page {
+.page {
+	/* Center our page content */
 	display: flex;
+	flex-direction: column;
+	font-size: 32px;
 	justify-content: center;
 	align-items: center;
-	height: 845px;
-	width: auto;
-}
 
-#about-text {
-	width: 100%;
-	height: 360px;
-	color: #FFF;
-	text-align: center;
-	font-family: "GFS Didot";
-	font-size: 48px;
-	font-style: normal;
+	/* font config */
 	font-weight: 400;
-	line-height: normal;
+	text-align: center;
+	padding: 0px 160px 0px;
 }

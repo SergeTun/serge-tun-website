@@ -12,6 +12,7 @@ nav {
 	position: sticky;
 	top: 0;
 	background: black;
+	z-index: 1000;
 }
 
 html {
@@ -20,21 +21,29 @@ html {
 	font-family: "GFS Didot";
 }
 
-html, body {
-	/* Cool snap effect, remove if you don't like */
-	scroll-snap-type: both mandatory;
-}
+
 /* Bro these two class' are gonna mess you up in the future if you don't understand them, i swear. Ask me if you can't get it*/
 .fit-whole-screen {
 	display: flex;
-	flex-direction: column;
+	flex-flow: column wrap;
+	justify-content: space-evenly;
 	/* height should be the screen size - nav bar height */
-	height: calc(100dvh - 110px);
+	min-height: calc(100dvh - 110px);
+	margin-bottom: 100px;
+	margin-top: 100px;
 }
 
 /* fit rest of screen */
 .fill-screen-leftover {
 	flex-grow: 1;
+}
+
+.horizontal-split {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
 }
 
 
@@ -52,10 +61,6 @@ a.nav-element {
 	align-items: center;
 	text-align: center;
 
-	/* Cool snap effect, remove if you don't like */
-	scroll-snap-align: start;
-  scroll-margin-top: 110px;
-
 	/* font config */
 	font-size: 48px;
 }
@@ -72,13 +77,12 @@ h1.heading {
 	padding-top: 15px;
 	padding-bottom: 15px;
 
-	/* Cool snap effect, remove if you don't like */
-	scroll-snap-align: start;
-  scroll-margin-top: 110px;
-
 	/* font config */
 	font-size: 64px;
 	letter-spacing: 5px;
+
+	/* space between header and text */
+	margin-top: 150px;
 
 	/* center element */
 	display: flex;
@@ -90,11 +94,53 @@ h1.heading {
 	/* Center our page content */
 	display: flex;
 	flex-direction: column;
-	font-size: 32px;
 	justify-content: center;
 	align-items: center;
 	padding: 0px 160px 0px;
 
 	/* font config */
 	text-align: center;
+	font-size: 32px;
+	/* space between header and text */
+	margin-top: 150px;
+}
+
+.about-page {
+	/* Center our page content */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 160px 0px;
+
+	/* font config */
+	text-align: center;
+	font-size: 32px;
+	/* space between header and text */
+	margin-top: 150px;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.fadeIn {
+	animation: fadeIn 2s ease-in-out; 
+}
+
+
+.about-photo img {
+	width: 300px;
+	height: auto;
+	border-radius: 16px;
+}
+
+.about-text {
+	text-align: left;
+	max-width: 600px;
 }
